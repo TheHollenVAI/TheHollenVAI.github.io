@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html><head>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
 <title>TheHollenVAI</title>
 <link rel="shortcut icon" type="image/jpg" href="/Users/hollen/Desktop/                            /Vaico.png"/>
 <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
@@ -160,10 +166,15 @@ a:hover, a:active {
   <div class="container">
     <label for="uname"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
+	<label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
-    <button type="submit" redirect="https://www.google.com">Sign Up/Login</button>
+	<div class="g-recaptcha" data-sitekey="6LeweHUaAAAAAKpUJo_8VSpw1Snv_aAc6rs_yun7"></div>
+	<button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+	
+    <button type="submit" href="www.google.com">Sign Up/Login</button>
   </div>
 </form>
 <ul>
