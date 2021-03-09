@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
  <script>
    function onSubmit(token) {
      document.getElementById("demo-form").submit();
@@ -168,12 +168,7 @@ a:hover, a:active {
     <input type="text" placeholder="Enter Email" name="uname" required>
 	<label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
-	<div class="g-recaptcha" data-sitekey="6LeweHUaAAAAAKpUJo_8VSpw1Snv_aAc6rs_yun7"></div>
-	<button class="g-recaptcha" 
-        data-sitekey="reCAPTCHA_site_key" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
-	
+	<div class="h-captcha" data-sitekey="7efe12f8-6316-458f-a6e5-93946088d4c5"></div>
     <button type="submit" href="www.google.com">Sign Up/Login</button>
   </div>
 </form>
